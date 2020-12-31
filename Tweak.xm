@@ -139,6 +139,7 @@ CGFloat scaleIndicatorPadding = 4.0;
     }
 }
 
+
 %new
 -(void)pan:(UIPanGestureRecognizer *)sender {
     if (sender.state == UIGestureRecognizerStateBegan) {
@@ -215,6 +216,7 @@ CGFloat scaleIndicatorPadding = 4.0;
         [self fadeScaleIndicatorDelayed];
     }
 }
+
 
 %new
 -(void)fadeScaleIndicatorDelayed {
@@ -321,9 +323,9 @@ CGFloat scaleIndicatorPadding = 4.0;
             )] autorelease];
             self.panningView.alpha = 0.5;
 
-            UIPanGestureRecognizer *pan = [[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)] autorelease];
+            // UIPanGestureRecognizer *pan = [[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)] autorelease];
 
-            [self.panningView addGestureRecognizer:pan];
+            // [self.panningView addGestureRecognizer:pan];
 
             UITapGestureRecognizer *doubleTap = [[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTap:)] autorelease];
             doubleTap.numberOfTapsRequired = 2; 
